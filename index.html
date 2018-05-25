@@ -29,12 +29,21 @@
 
 		.section {
 			 padding: 0 10%;
+			 overflow: hidden;
+		}
+		.flexWrapper {
+			 display: flex;
+			 justify-content: center;
+		}
+		.flexCol {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 		}
 
 		.halfsec {
 			height: 50vw;
-			width: 40vw;
-			float: left;
+			width: 50%;
 		}
 		.backImage {
 			background-size: contain;
@@ -43,7 +52,7 @@
 		}
 
 		.useRender {
-			width: 50%;
+			width: 20vw;
 			height: 100%;
 			background-size: contain;
 			background-repeat: no-repeat;
@@ -203,37 +212,41 @@
 	<div id="fullpage">
 		<div class="section" data-anchor="home">
 			<!-- <h1>LifeWatch</h1> -->
-			<div class="halfsec backImage" style="background-image:url(Images/WhiteSub.png);margin-bottom:4%;"></div>
-			<div class="halfsec backImage" style="background-image:url(Images/BandIso.png);margin-top:2%;background-position-x:80%"></div>
+			<div class="flexWrapper">
+				<div class="halfsec backImage" style="background-image:url(Images/WhiteSub.png);margin-bottom:4%;"></div>
+				<div class="halfsec backImage" style="background-image:url(Images/BandIso.png);margin-top:2%;background-position-x:80%"></div>
+			</div>
 		</div>
 		<div class="section" data-anchor="take" style="color:white">
 			<!-- <div class="halfsec"></div> -->
 			<div style="width:100%;height:100%;background-image:url(Images/IsoDecals.png);" class="backImage">
 				<h1 style="padding:5% 0 0 0;margin:0">Take it everywhere.</h1>
-				<div class="" style="display:flex;flex-direction:column;justify-content:center;width:45%;float:left">
+				<div class="flexCol" style="width:45%;float:left">
 					<p>Up to <a style="color:white" href="https://doi.org/10.1016/j.anai.2014.04.009">60%</a> of patients who are prescribed epinephrine auto-injectors don't carry them regularly. Users don't like the large form factors of available options and can easily forget their devices at home. This is a life-threatening risk.</p>
 				</div>
-				<div class="" style="display:flex;flex-direction:column;justify-content:center;width:45%;float:right">
+				<div class="flexCol" style="width:45%;float:right">
 					 <p style="position:absolute;bottom:0;margin-right:5%;margin-bottom:5%">LifeWatch goes with you, wherever you go. Unlike other auto-injectors, LifeWatch stays on your wrist so you're always prepared for an emergency. Bring it to work, to school, or to a night out. Carry it on a hike or a run without a bag or a second thought.</p>
 				</div>
 			</div>
 		</div>
 		<div class="section" data-anchor="easy">
-			<div class="halfsec" style="display: flex;flex-direction:column;justify-content:center;font-size:calc(100vw/80)">
-				<div style="margin:5%;height:100%;display: flex;flex-direction:column;justify-content:center">
-				<h1 style="margin:0">LifeWatch is easy to use.</h1>
-				<h2 style="margin:0 0 5% 0;">Click through the steps and try it out.</h2>
-				<span class="animPlayButton" id="animPlayButton1"><span>Step 1</span> - Remove the back safety cap</span><br>
-				<span class="animPlayButton APBdisabled" id="animPlayButton2"><span>Step 2</span> - Pull out injection cartridge</span><br>
-				<span class="animPlayButton APBdisabled" id="animPlayButton3"><span>Step 3</span> - Push into the outer thigh</span><br>
-				<span class="animPlayButton APBdisabled" id="animPlayButton4"><span>Reset </span></span><br>
+			<div class="flexWrapper">
+				<div class="halfsec flexCol" style="font-size:calc(100vw/80)">
+					<div class="flexCol" style="margin:5%;height:100%;">
+						<h1 style="margin:0">LifeWatch is easy to use.</h1>
+						<h2 style="margin:0 0 5% 0;">Click through the steps and try it out.</h2>
+						<span class="animPlayButton" id="animPlayButton1"><span>Step 1</span> - Remove the back safety cap</span><br>
+						<span class="animPlayButton APBdisabled" id="animPlayButton2"><span>Step 2</span> - Pull out injection cartridge</span><br>
+						<span class="animPlayButton APBdisabled" id="animPlayButton3"><span>Step 3</span> - Push into the outer thigh</span><br>
+						<span class="animPlayButton APBdisabled" id="animPlayButton4"><span>Reset </span></span><br>
+					</div>
 				</div>
-			</div>
-			<div class="halfsec" style="text-align:center;position:relative">
-				<div class="useRender backImage" id="animBack" style="background-image:url(Images/Use/Back.png);background-position:50% 32%;"></div>
-				<div class="useRender backImage" id="animCart" style="background-image:url(Images/Use/Cartridge.png);background-position:center;"></div>
-				<div class="useRender backImage" id="animFront" style="background-image:url(Images/Use/Front.png);background-position:50% 60%;"></div>
-				<div class="useRender backImage" id="animBackTrim" style="background-image:url(Images/Use/BackTrim.png);background-position:50% 26.5%;"></div>
+				<div class="halfsec" style="text-align:center;position:relative">
+					<div class="useRender backImage" id="animBack" style="background-image:url(Images/Use/Back.png);background-position:50% 32%;"></div>
+					<div class="useRender backImage" id="animCart" style="background-image:url(Images/Use/Cartridge.png);background-position:center;"></div>
+					<div class="useRender backImage" id="animFront" style="background-image:url(Images/Use/Front.png);background-position:50% 60%;"></div>
+					<div class="useRender backImage" id="animBackTrim" style="background-image:url(Images/Use/BackTrim.png);background-position:50% 26.5%;"></div>
+				</div>
 			</div>
 		</div>
 		<div class="section" data-anchor="size" style="color:white;position:relative;">
