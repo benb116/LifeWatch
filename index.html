@@ -24,8 +24,26 @@
 		}
 		h1, h2, h3 {
 			font-weight: 500;
+			margin: 0;
+		}
+		h1 {
+			padding:5% 0 0 0;
 		}
 		b {font-weight:600}
+
+		#disclaimer {
+			position:fixed;
+			z-index:100;width:35%;background-color:white;bottom:0;margin-left:2em;border-radius:5px 5px 0 0;cursor:pointer;
+		}
+		#disclaimer:hover {
+			background-color: #E6E6E6;
+		}
+		#disclaimerHead {
+			line-height:2em;text-align:center
+		}
+		#disclaimerBody {
+			font-size:1em;padding:0 1em 0 1em;margin:0 0 1em 0;text-indent:1.5em;display:none;
+		}
 
 		.section {
 			 padding: 0 10%;
@@ -54,8 +72,6 @@
 		.useRender {
 			width: 20vw;
 			height: 100%;
-			background-size: contain;
-			background-repeat: no-repeat;
 			display: inline-block;
 			left: 25%;
 			position: absolute;
@@ -94,7 +110,7 @@
 			justify-content: space-around
 		}
 		.columnBlock {
-			height: 45vw;
+			height: 40vw;
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end
@@ -107,6 +123,33 @@
 		.ProfileSub {
 			margin: 1em auto;
 			font-size: 1.5em;
+		}
+		#SizeRuler {
+			color: white;
+			width: 50px;
+			height: 31vw;
+			margin-left: -75px;
+			position: absolute;
+			bottom: 0;
+		}
+		#SizeRuler > div {
+			border-bottom: solid white 2px;
+			height: 32%;
+			position: relative;
+		}
+		#SizeRuler > div > span {
+			position: absolute;
+			bottom: 0;
+		}
+
+		.Headshot {
+			width: 100%;
+			height: 70%;
+			border-radius: 10px;
+			background-size: cover;
+		}
+		.NameTag {
+			margin-top: 3%;
 		}
 
 		@-webkit-keyframes MOVE-Back {
@@ -205,9 +248,9 @@
 
 </head>
 <body>
-	<div id="disclaimer" style="position:fixed;z-index:100;width:35%;background-color:white;bottom:0;margin-left:2em;border-radius:5px 5px 0 0;">
-		<div id="disclaimerHead" style="line-height:2em;cursor:pointer;text-align:center">Disclaimer</div>
-		<p id="disclaimerBody" style="font-size:1em;padding:0 1em 0 1em;margin:0 0 1em 0;text-indent:1.5em;display:none;">LifeWatch is a <i>prototype</i> auto-injector. <b>LifeWatch has not been approved by any regulatory agency, including the FDA.</b> LifeWatch is not available for sale. Content on this website should not be construed as medical advice.</p>
+	<div id="disclaimer" style="">
+		<div id="disclaimerHead" style="">Disclaimer</div>
+		<p id="disclaimerBody" style="">LifeWatch is a <i>prototype</i> auto-injector. <b>LifeWatch has not been approved by any regulatory agency, including the FDA.</b> LifeWatch is not available for sale. Content on this website should not be construed as medical advice.</p>
 	</div>
 	<div id="fullpage">
 		<div class="section" data-anchor="home">
@@ -220,7 +263,7 @@
 		<div class="section" data-anchor="take" style="color:white">
 			<!-- <div class="halfsec"></div> -->
 			<div style="width:100%;height:100%;background-image:url(Images/IsoDecals.png);" class="backImage">
-				<h1 style="padding:5% 0 0 0;margin:0">Take it everywhere.</h1>
+				<h1>Take it everywhere.</h1>
 				<div class="flexCol" style="width:45%;float:left">
 					<p>Up to <a style="color:white" href="https://doi.org/10.1016/j.anai.2014.04.009">60%</a> of patients who are prescribed epinephrine auto-injectors don't carry them regularly. Users don't like the large form factors of available options and can easily forget their devices at home. This is a life-threatening risk.</p>
 				</div>
@@ -233,7 +276,7 @@
 			<div class="flexWrapper">
 				<div class="halfsec flexCol" style="font-size:calc(100vw/80)">
 					<div class="flexCol" style="margin:5%;height:100%;">
-						<h1 style="margin:0">LifeWatch is easy to use.</h1>
+						<h1>LifeWatch is easy to use.</h1>
 						<h2 style="margin:0 0 5% 0;">Click through the steps and try it out.</h2>
 						<span class="animPlayButton" id="animPlayButton1"><span>Step 1</span> - Remove the back safety cap</span><br>
 						<span class="animPlayButton APBdisabled" id="animPlayButton2"><span>Step 2</span> - Pull out injection cartridge</span><br>
@@ -250,35 +293,45 @@
 			</div>
 		</div>
 		<div class="section" data-anchor="size" style="color:white;position:relative;">
-			<h1 style="text-align:center">Size matters.</h2>
+			<h1 style="text-align:center">Size matters.</h1>
+			<h3 style="text-align:center">Users don't want a bulky device. An auto-injector should be portable and easy to remember.</h3>
 			<div class="sectionContainer">
 				<div class="columnBlock">
-					<div class="Profile backImage" style="width:8.3vw;height:35vw;background-color:white;"></div>
+					<div class="Profile backImage" style="width:7.1vw;height:30vw;border: solid #E6E6E6 2px;position:relative">
+						<div id="SizeRuler" class="flexCol">
+							<div style="height:4%"><span>6 in.</span></div>
+							<div><span>4 in.</span></div>
+							<div><span>2 in.</span></div>
+							<div><span>0</span></div>
+						</div>	
+					</div>
 					<h3 class="ProfileSub">EpiPen®</h3>
 				</div>
 				<div class="columnBlock">
-					<div class="Profile backImage" style="width:11.4vw;height:20vw;background-color:white;"></div>
+					<div class="Profile backImage" style="width:9.8vw;height:17.1vw;border: solid #E6E6E6 2px"></div>
 					<h3 class="ProfileSub">Auvi-Q®</h3>
 				</div>
 				<div class="columnBlock">
-					<div class="Profile backImage" style="width:10.5vw;height:12.1vw;background-image:url(Images/FullCaseClosedFront.png);"></div>
+					<div class="Profile backImage" style="width:9vw;height:10.4vw;background-image:url(Images/FullCaseClosedFront.png);"></div>
 					<h3 class="ProfileSub">LifeWatch</h3>
 				</div>
 			</div>
-
 		</div>
 		<!-- <div class="section" data-anchor="make">Make it yours</div> -->
 		<div class="section" data-anchor="about">
-			<h2>About us</h2>
-			<div style="width:80vw;height:45vw;display:flex;flex-direction:row;justify-content:space-around;">
-				<div class="optionBlock">
-					<div class="Profile backImage"></div>
+			<h1 style="margin:0 auto;text-align:center">We're committed to improving the lives of millions.</h1>
+			<div class="flexWrapper" style="width:80vw;height:45vw;text-align:center;margin-top:5%">
+				<div class="flexCol" style="width:30%;margin: 0 3%;justify-content: flex-start">
+					<div class="Headshot backImage" style="background-image:url(Images/Headshots/Picture1.png)"></div>
+					<h2 class="NameTag">Ben Bernstein</h2>
 				</div>
-				<div class="optionBlock">
-					
+				<div class="flexCol" style="width:30%;margin: 0 5%;justify-content: flex-start">
+					<div class="Headshot backImage" style="background-image:url(Images/Headshots/Picture2.png)"></div>
+					<h2 class="NameTag">Reed Ginsberg</h2>
 				</div>
-				<div class="optionBlock">
-					
+				<div class="flexCol" style="width:30%;margin: 0 3%;justify-content: flex-start">
+					<div class="Headshot backImage" style="background-image:url(Images/Headshots/Picture3.png)"></div>
+					<h2 class="NameTag">Daniel Orol</h2>
 				</div>
 			</div>
 		</div>
