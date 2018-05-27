@@ -1,0 +1,312 @@
+html {
+	font-size: 1em;
+}
+body {
+	font-family: 'Avenir Next';
+	margin: 0;
+	transition: all 0.5s ease-in-out;
+}
+p {
+	font-size: 1em;
+}
+h1, h2, h3 {
+	font-weight: 500;
+	margin: 0;
+}
+h1 {
+	padding:5% 0 0 0;
+}
+b {font-weight:600}
+
+#disclaimer {
+	position:fixed;
+	z-index:100;
+	width:35%;
+	background-color:white;
+	bottom:0;
+	margin-left:2em;
+	border-radius:5px 5px 0 0;
+	cursor:pointer;
+}
+#disclaimer:hover {
+	background-color: #E6E6E6;
+}
+#disclaimerHead {
+	line-height:2em;
+	text-align:center;
+}
+#disclaimerBody {
+	font-size:1em;
+	padding:0 1em 0 1em;
+	margin:0 0 1em 0;
+	text-indent:1.5em;
+	display:none;
+}
+
+.section {
+	padding: 0 10%;
+	overflow: hidden;
+}
+.flexWrapper {
+	display: flex;
+	justify-content: center;
+	font-size:calc(100vw/80);
+}
+.flexCol {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.halfsec {
+	height: 50vw;
+	width: 50%;
+}
+
+.parDiv {
+	width:45%;
+}
+#TakeDiv {
+	width:100%;
+	height:100%;
+	background-image:url(Images/IsoDecals.png);
+}
+#TakeDiv > img {
+	display: none;
+}
+#leftPar {
+	right:0;
+	position:absolute;
+	bottom:0;
+	margin-right:5%;
+	margin-bottom:5%
+}
+
+.backImage {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.useRender {
+	width: 20vw;
+	height: 100%;
+	display: inline-block;
+	left: 25%;
+	position: absolute;
+	-webkit-animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+#animBack {
+	background-image:url(Images/Use/Back.png);
+	background-position:50% 32%;
+}
+#animCart {
+	background-image:url(Images/Use/Cartridge.png);
+	background-position:center;
+}
+#animFront {
+	background-image:url(Images/Use/Front.png);
+	background-position:50% 60%;
+}
+#animBackTrim {
+	background-image:url(Images/Use/BackTrim.png);
+	background-position:50% 26.5%;
+}
+
+.animPlayButton {
+	font-size: 1.5em;
+	cursor:pointer;
+}
+.animPlayButton > span {
+	transition: all 0.3s ease;
+	text-align: center;
+	display: inline-block;
+	width: 3em;
+	background-color: #FFBE00;
+	color: white;
+	padding: 0 1em;
+	border-radius: 1em;
+}
+.animPlayButton > span:hover {
+}
+.APBdisabled {
+	color: gray;
+	cursor: initial;
+}
+.APBdisabled > span {
+	background-color: #ffd968;
+}
+
+.profileContainer {
+	width: 80vw;
+	height: 45vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around
+}
+.columnBlock {
+	height: 40vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end
+}
+.Profile {
+	border-radius:10px;
+	color:black;
+	margin: 0 auto;
+}
+#prof1 {
+	width: 7.1vw;
+	height: 30vw;
+}
+#prof2 {
+	width: 9.8vw;
+	height: 17.1vw;
+}
+#prof3 {
+	width: 9vw;
+	height: 10.4vw;
+}
+.ProfileSub {
+	margin: 1em auto;
+	font-size: 1.5em;
+}
+#SizeRuler {
+	color: white;
+	width: 50px;
+	height: 31vw;
+	margin-left: -75px;
+	position: absolute;
+	bottom: 0;
+}
+#SizeRuler > div {
+	border-bottom: solid white 2px;
+	height: 32%;
+	position: relative;
+}
+#SizeRuler > div > span {
+	position: absolute;
+	bottom: 0;
+}
+.HeadColumn {
+	width: 30%;
+	margin: 0 3%;
+	justify-content: flex-start;
+}
+.Headshot {
+	width: 100%;
+	height: 30vw;
+	border-radius: 10px;
+	background-size: cover;
+}
+.NameTag {
+	margin: 0.5em 0;
+}
+
+
+#fp-nav ul li a span {
+	background-color: #FFBE00;
+}
+
+@media only screen and (max-width: 800px) {
+	#fp-nav {
+		display: none;
+	}
+	#disclaimer {
+		width: 80vw;
+	}
+    .halfsec {
+        width: 100%;
+        height: 55vh;
+    }
+    .flexWrapper {
+		flex-direction: column;
+		height: 90vh;
+		font-size:.75em
+    }
+    #Logo {
+    	height: 20vh;
+    }
+    h1, h2 {
+    	text-align: center;
+    }
+    .parDiv {
+    	width:80vw;
+    }
+    #TakeDiv {
+    	background-image: none;
+    }
+    #TakeDiv > img {
+    	display: block;
+    	margin: 0 auto;
+    }
+    #leftPar {
+    	position: relative;
+    	margin: 3em 0;
+    }
+    .animPlayButton {
+    	font-size: 1.2em;
+    }
+    #UseBox {
+    	height: ;
+    }
+    .useRender {
+    	width: 40%;
+    	margin: 0 5%;
+    }
+    .profileContainer {
+    	height: 70vh;
+    	align-items: flex-end;
+    }
+    .columnBlock {
+    	height: 80%;
+    }
+    #prof1 {
+    	width: 9.4vh;
+    	height: 40vh;
+    }
+    #prof2 {
+    	width: 13vh;
+    	height: 22.8vh;
+    }
+    #prof3 {
+    	width: 12vh;
+    	height: 13.8vh;
+    }
+    .ProfileSub {
+    	font-size: 1.25em;
+    }
+    #SizeRuler {
+    	height: 40vh;
+    	width: 2em;
+    	margin-left: -2.75em;
+    }
+    .HeadColumn {
+    	width: 40vw;
+    	height: 80vh;
+    	margin: 0 auto;
+    }
+    .Headshot {
+    	height: 80vh;
+    }
+}
+
+@-webkit-keyframes MOVE-Back {
+	to { -webkit-transform: translateY(-29%);}
+}
+@-webkit-keyframes MOVE-Front {
+	to { -webkit-transform: translateY(25%);}
+}
+@-webkit-keyframes MOVE-Cart1 {
+	to { -webkit-transform: translateY(25%);}
+}
+@-webkit-keyframes MOVE-Cart2 {
+	from { -webkit-transform: translateY(25%); }
+	to {-webkit-transform: translateY(-12%);}
+}
+@-webkit-keyframes MOVE-Cart3 {
+	from {-webkit-transform: translateY(-12%);}
+	67% {-webkit-transform: translateY(-12%) rotate(-90deg);}
+	100% {-webkit-transform: translateY(-12%) rotate(-90deg) translateY(30%);}
+}
