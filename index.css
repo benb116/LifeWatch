@@ -22,14 +22,14 @@ b {font-weight:600}
 	position:fixed;
 	z-index:100;
 	width:35%;
-	background-color:white;
+	background-color:#E6E6E6;
 	bottom:0;
 	margin-left:2em;
 	border-radius:5px 5px 0 0;
 	cursor:pointer;
 }
 #disclaimer:hover {
-	background-color: #E6E6E6;
+	/* background-color: #E6E6E6; */
 }
 #disclaimerHead {
 	line-height:2em;
@@ -105,6 +105,10 @@ b {font-weight:600}
 	background-image:url(Images/Use/Cartridge.png);
 	background-position:center;
 }
+#animRev {
+	background-image:url(Images/Use/Revolve.png);
+	background-position:50% 63%;
+}
 #animFront {
 	background-image:url(Images/Use/Front.png);
 	background-position:50% 60%;
@@ -173,7 +177,7 @@ b {font-weight:600}
 	font-size: 1.5em;
 }
 #SizeRuler {
-	color: white;
+	color: black;
 	width: 50px;
 	height: 31vw;
 	margin-left: -75px;
@@ -181,7 +185,7 @@ b {font-weight:600}
 	bottom: 0;
 }
 #SizeRuler > div {
-	border-bottom: solid white 2px;
+	border-bottom: solid black 2px;
 	height: 32%;
 	position: relative;
 }
@@ -211,6 +215,9 @@ a > img {
 
 #fp-nav ul li a span {
 	background-color: #FFBE00;
+}
+#fp-nav ul li .fp-tooltip {
+	color: black;
 }
 
 @media only screen and (max-width: 800px) {
@@ -288,7 +295,7 @@ a > img {
     }
     .HeadColumn {
     	width: 35vw;
-    	height: 80vh;
+    	height: 100vh;
     	margin: 0 auto;
     }
     .Headshot {
@@ -300,17 +307,29 @@ a > img {
 	to { -webkit-transform: translateY(-29%);}
 }
 @-webkit-keyframes MOVE-Front {
-	to { -webkit-transform: translateY(25%);}
+	to { -webkit-transform: translateY(30%);}
 }
 @-webkit-keyframes MOVE-Cart1 {
-	to { -webkit-transform: translateY(25%);}
+	to { -webkit-transform: translateY(30%);}
 }
 @-webkit-keyframes MOVE-Cart2 {
-	from { -webkit-transform: translateY(25%); }
+	from { -webkit-transform: translateY(30%); }
 	to {-webkit-transform: translateY(-12%);}
 }
 @-webkit-keyframes MOVE-Cart3 {
 	from {-webkit-transform: translateY(-12%);}
 	67% {-webkit-transform: translateY(-12%) rotate(-90deg);}
 	100% {-webkit-transform: translateY(-12%) rotate(-90deg) translateY(30%);}
+}
+@-webkit-keyframes MOVE-Cart4 {
+	from {-webkit-transform: translateY(-12%) rotate(-90deg) translateY(30%);}
+	50% {-webkit-transform: translateY(-12%) rotate(-90deg);}
+	100% {-webkit-transform: translateY(-12%);transform-origin: 50% 50%;}
+}
+@-webkit-keyframes ROT-Rev {
+	from {-webkit-transform: translateY(-12%) rotate(-90deg) translateY(30%);transform-origin: 50% 50%;}
+	33% {-webkit-transform: translateY(-12%) rotate(-90deg);transform-origin: 50% 50%;}
+	66% {-webkit-transform: translateY(-12%); transform-origin: 50% 50%;}
+	67% {-webkit-transform: translateY(-12%); transform-origin: 20% 62%;}
+	100% {transform-origin: 20% 62%; -webkit-transform: translateY(-12%) rotate(55deg)}
 }
