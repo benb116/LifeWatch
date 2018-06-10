@@ -208,6 +208,11 @@ b {font-weight:600}
 	margin: 0.5em 0;
 }
 
+.EndCol {
+	width: 30%;
+	margin: 0 3%;
+	justify-content: flex-start;
+}
 a > img {
 	margin: 0.5em 0;
 }
@@ -300,6 +305,11 @@ a > img {
     }
     .Headshot {
     	height: 80vh;
+    }
+    .EndCol {
+    	width: 50%;
+    	margin: 0 auto;
+    	margin-bottom: 2em;
     }
 }
 

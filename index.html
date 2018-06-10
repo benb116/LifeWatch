@@ -60,7 +60,7 @@
 					$('#animRev').css('-webkit-animation-name', 'MOVE-Cart2')
 					$('#animPlayButton2').toggleClass('APBdisabled');
 					$('#animPlayButton3').toggleClass('APBdisabled');
-					animationState = 2
+					animationState = 2;
 				}
 			})
 			$('#animPlayButton3').click(function() {
@@ -69,7 +69,7 @@
 					$('#animRev').css('-webkit-animation-name', 'MOVE-Cart3')
 					$('#animPlayButton3').toggleClass('APBdisabled');
 					$('#animPlayButton4').toggleClass('APBdisabled');
-					animationState = 3
+					animationState = 3;
 				}
 			})
 
@@ -80,12 +80,12 @@
 					$('#animRev').css('-webkit-animation-duration', '1.5s')
 					$('#animRev').css('-webkit-animation-name', 'ROT-Rev')
 					$('#animPlayButton4').toggleClass('APBdisabled');
-					animationState = 4
+					animationState = 4;
 				}
 			})
 			$('#animPlayButton5').click(function() {
 				if (animationState != 0) {
-					animationState = 0
+					animationState = 0;
 					$('#animRev').css('-webkit-animation-duration', '1s')
 					$('#animBack, #animBackTrim').css('-webkit-animation-name', '')
 					$('#animCart').css('-webkit-animation-name', '')
@@ -95,6 +95,7 @@
 					$('#animPlayButton2').addClass('APBdisabled');
 					$('#animPlayButton3').addClass('APBdisabled');
 					$('#animPlayButton4').addClass('APBdisabled');
+					$('#animPlayButton5').addClass('APBdisabled');
 				}
 			})
 		});
@@ -128,7 +129,7 @@
 			<div id="TakeDiv" style="" class="backImage">
 				<h1>Take it everywhere.</h1>
 				<p class="parDiv">Up to <span style="font-size:1.5em">60%</span> of patients who are prescribed epinephrine auto-injectors don't carry them regularly. Users don't like the large form factors of available options and can easily forget their devices at home. This is a life-threatening risk.</p>
-				<img src="Images/Use/Cartridge.png" width="80%">
+				<img src="Images/Use/CartridgeFull.png" width="80%">
 				<!-- <div style="float:right"> -->
 				<p class="parDiv" id="leftPar">LifeWatch goes with you, wherever you go. Unlike other auto-injectors, LifeWatch stays on your wrist so you're always prepared for an emergency. Bring it to work, to school, or to a night out. Carry it on a hike or a run without a bag or a second thought.</p>
 				<!-- </div> -->
@@ -201,19 +202,19 @@
 		</div>
 		<div class="section" data-anchor="contact" style="color:white">
 			<div class="flexWrapper" >
-				<div class="HeadColumn flexCol" style="margin:0 2.5%; text-align:right">
+				<div class="EndCol flexCol" style="margin:0 2.5%; text-align:right">
 					<h1>As seen in</h1>
 					<a href="https://technical.ly/philly/2018/03/26/penn-students-compete-best-healthtech-idea-inaugural-mt-summit/"><img width="85%" src="https://2h7qju2c3qvcc3s86ekn8n0-wpengine.netdna-ssl.com/philly/wp-content/themes/national/images/logo-phl.png"></a>
 					<a href="http://www.thedp.com/article/2018/03/management-technology-conference-upenn-philadelphia-penn-wharton-engineering"><img width="85%" src="Images/End/TheDP.png"></a>
 					<a href="https://penntoday.upenn.edu/news/2018-senior-design-competition-winners-innovate-develop-and-deliver"><img width="85%" src="Images/End/PennToday.png"></a>
 					<a href="https://medium.com/penn-engineering/project-lifewatch-a-wearable-epinephrine-injector-wins-2018-senior-design-competition-e5b51c524ce9"><img width="85%" src="Images/End/Penngineering.png"></a>
 				</div>
-				<div class="HeadColumn flexCol" style="margin:0 2.5%;  text-align:center">
+				<div class="EndCol flexCol" style="margin:0 2.5%;  text-align:center">
 					<h1>Contact us</h1>
 					<p>Leave a comment, <br> ask a question, <br> or share your story. <br>We'd love to hear from you. <br><br><a style="color:white" href="mailto:contact@projectlifewatch.com">contact@projectlifewatch.com</a></p>
 					<h3>Made at Penn Engineering in Philadelphia.</h3>
 				</div>
-				<div class="HeadColumn flexCol" style="margin:0 2.5%; ">
+				<div class="EndCol flexCol" style="margin:0 2.5%; ">
 					<h1>Awards</h1>
 					<!-- <br> -->
 					<a href="https://www.mtintlab.com/summit"><img width="85%" src="Images/End/MandT.png"></a>
