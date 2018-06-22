@@ -15,9 +15,11 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
+			var visited = [true, false, false, false, false, false];
+			var pageAnchors = ['home', 'take', 'easy', 'size', 'about', 'contact'];
 			$('#fullpage').fullpage({
 				sectionsColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#333333'],
-				anchors: ['home', 'take', 'easy', 'size', 'about', 'contact'],
+				anchors: pageAnchors,
 				keyboardScrolling: true,
 				animateAnchor: true,
 				autoScrolling: false,
@@ -31,6 +33,13 @@
 						$('#fp-nav ul li .fp-tooltip').css('color', 'white');
 					} else if (index === 6 && nextIndex === 5) {
 						$('#fp-nav ul li .fp-tooltip').css('color', 'black');						
+					}
+					var zeroed = nextIndex-1;
+					if (!visited[zeroed]) {
+						gtag('config', 'UA-49014722-7', {
+						  'page_title' : pageAnchors[zeroed],
+						});
+						visited[zeroed] = true;
 					}
 				},
 			});
@@ -200,6 +209,11 @@
 				</div>
 			</div>
 		</div>
+		<!-- <div class="section" data-anchor="story" style="text-align:center">
+			<h1 style="padding:0">Hear our story.</h1>
+			<br>
+			<iframe width="75%" height="60%" src="https://www.youtube.com/embed/eG03bSHrDBU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div> -->
 		<div class="section" data-anchor="contact" style="color:white">
 			<div class="flexWrapper" >
 				<div class="EndCol flexCol" style="margin:0 2.5%; text-align:right">
@@ -211,15 +225,15 @@
 				</div>
 				<div class="EndCol flexCol" style="margin:0 2.5%;  text-align:center">
 					<h1>Contact us</h1>
-					<p>Leave a comment, <br> ask a question, <br> or share your story. <br>We'd love to hear from you. <br><br><a style="color:white" href="mailto:contact@projectlifewatch.com">contact@projectlifewatch.com</a></p>
+					<p>Leave a comment, <br> ask a question, <br> or share your story. <br>We'd love to hear from you. <br><br><a style="color:white" href="mailto:contact@projectlifewatch.com">contact@projectlifewatch.com</a><br><br>(516) 279-0016</p>
 					<h3>Made at Penn Engineering in Philadelphia.</h3>
 				</div>
 				<div class="EndCol flexCol" style="margin:0 2.5%; ">
 					<h1>Awards</h1>
 					<!-- <br> -->
 					<a href="https://www.mtintlab.com/summit"><img width="85%" src="Images/End/MandT.png"></a>
-					<a href="https://www.seas.upenn.edu/undergraduate/student-life/design-competition.php"><img width="85%" src="Images/End/Penngineering.png"></a> 
-					<a href="https://venturewell.org/bmeidea/"><img width="85%" src="Images/End/BME.png"></a> 
+					<a href="http://www.seas.upenn.edu/undergraduate/student-life/design-competition-past.php"><img width="85%" src="Images/End/Penngineering.png"></a> 
+					<a href="https://venturewell.org/2018-bmeidea-competition-winners/"><img width="85%" src="Images/End/BME.png"></a> 
 					<!-- <h3>M&T Summit - 1st Prize</h3>
 					<h3>Senior Design - 1st Prize</h3>
 					<h3>BMEidea - Finalist</h3> -->
