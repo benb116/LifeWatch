@@ -54,6 +54,10 @@
 			var animationState = 0;
 			$('#animPlayButton1').click(function() {
 				if (animationState == 0) {
+					gtag('event', 'click', {
+					  'event_category': 'tryit',
+					  'event_label': '1'
+					});
 					$('#animBack, #animBackTrim').css('-webkit-animation-name', 'MOVE-Back')
 					$('#animCart').css('-webkit-animation-name', 'MOVE-Cart1')
 					$('#animRev').css('-webkit-animation-name', 'MOVE-Cart1')
@@ -66,6 +70,10 @@
 			})
 			$('#animPlayButton2').click(function() {
 				if (animationState == 1) {
+					gtag('event', 'click', {
+					  'event_category': 'tryit',
+					  'event_label': '2'
+					});
 					$('#animCart').css('-webkit-animation-name', 'MOVE-Cart2')
 					$('#animRev').css('-webkit-animation-name', 'MOVE-Cart2')
 					$('#animPlayButton2').toggleClass('APBdisabled');
@@ -75,6 +83,10 @@
 			})
 			$('#animPlayButton3').click(function() {
 				if (animationState == 2) {
+					gtag('event', 'click', {
+					  'event_category': 'tryit',
+					  'event_label': '3'
+					});
 					$('#animCart').css('-webkit-animation-name', 'MOVE-Cart3')
 					$('#animRev').css('-webkit-animation-name', 'MOVE-Cart3')
 					$('#animPlayButton3').toggleClass('APBdisabled');
@@ -85,7 +97,10 @@
 
 			$('#animPlayButton4').click(function() {
 				if (animationState == 3) {
-
+					gtag('event', 'click', {
+					  'event_category': 'tryit',
+					  'event_label': '4'
+					});
 					$('#animCart').css('-webkit-animation-name', 'MOVE-Cart4')
 					$('#animRev').css('-webkit-animation-duration', '1.5s')
 					$('#animRev').css('-webkit-animation-name', 'ROT-Rev')
@@ -95,6 +110,10 @@
 			})
 			$('#animPlayButton5').click(function() {
 				if (animationState != 0) {
+					gtag('event', 'click', {
+					  'event_category': 'tryit',
+					  'event_label': '0'
+					});
 					animationState = 0;
 					$('#animRev').css('-webkit-animation-duration', '1s')
 					$('#animBack, #animBackTrim').css('-webkit-animation-name', '')
@@ -226,7 +245,7 @@
 				</div>
 				<div class="EndCol flexCol" style="margin:0 2.5%;  text-align:center">
 					<h1>Contact us</h1>
-					<p>Leave a comment, <br> ask a question, <br> or share your story. <br>We'd love to hear from you. <br><br><a style="color:white" href="mailto:contact@projectlifewatch.com">contact@projectlifewatch.com</a><br><br>(516) 279-0016</p>
+					<p>Leave a comment, <br> ask a question, <br> or share your story. <br>We'd love to hear from you. <br><br><a style="color:white" href="mailto:contact@projectlifewatch.com">contact@projectlifewatch.com</a><br><br>(516) 279-0017</p>
 					<h3>Made at Penn Engineering in Philadelphia.</h3>
 				</div>
 				<div class="EndCol flexCol" style="margin:0 2.5%; ">
