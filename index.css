@@ -22,7 +22,7 @@ b {font-weight:600}
 #disclaimer {
 	position:fixed;
 	z-index:100;
-	width:35%;
+	width:45%;
 	background-color:#E6E6E6;
 	bottom:0;
 	margin-left:2em;
@@ -41,7 +41,7 @@ b {font-weight:600}
 	padding:0 1em 0 1em;
 	margin:0 0 1em 0;
 	text-indent:1.5em;
-	display:none;
+	/* display:none; */
 }
 
 .section {
