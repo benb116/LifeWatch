@@ -17,9 +17,9 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			var visited = [true, false, false, false, false, false];
-			var pageAnchors = ['home', 'take', 'easy', 'size', 'about', 'contact'];
+			var pageAnchors = ['home', 'take', 'easy', 'size', 'story', 'about', 'contact'];
 			$('#fullpage').fullpage({
-				sectionsColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#333333'],
+				sectionsColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#333333'],
 				anchors: pageAnchors,
 				keyboardScrolling: true,
 				animateAnchor: true,
@@ -27,12 +27,12 @@
 				navigation: true,
 				fitToSection: false,
 				lockAnchors: true,
-				navigationTooltips: ['LifeWatch', 'Take it everywhere', 'Easy to use', 'Size matters', 'About us', 'Contact us'],
+				navigationTooltips: ['LifeWatch', 'Take it everywhere', 'Easy to use', 'Size matters', 'Our story', 'About us', 'Contact us'],
 				// showActiveTooltip: true,
 				onLeave: function(index, nextIndex, direction){
-					if (index === 5 && nextIndex === 6) {
+					if (index === 6 && nextIndex === 7) {
 						$('#fp-nav ul li .fp-tooltip').css('color', 'white');
-					} else if (index === 6 && nextIndex === 5) {
+					} else if (index === 7 && nextIndex === 6) {
 						$('#fp-nav ul li .fp-tooltip').css('color', 'black');						
 					}
 					var zeroed = nextIndex-1;
@@ -213,6 +213,11 @@
 				</div>
 			</div>
 		</div>
+		<div class="section" data-anchor="story" style="text-align:center">
+			<h1 style="padding:0">Hear our story.</h1>
+			<br>
+			<iframe width="85%" height="70%" src="https://www.youtube.com/embed/eG03bSHrDBU?rel=0;controls=0;showinfo=0;theme=light" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
 		<div class="section" data-anchor="about">
 			<h1 style="margin:0 auto;text-align:center;padding:0">We're committed to improving the lives of millions. Join us.</h1>
 			<div class="flexWrapper" style="text-align:center;margin-top:5%">
@@ -230,11 +235,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div class="section" data-anchor="story" style="text-align:center">
-			<h1 style="padding:0">Hear our story.</h1>
-			<br>
-			<iframe width="75%" height="60%" src="https://www.youtube.com/embed/eG03bSHrDBU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-		</div> -->
 		<div class="section" data-anchor="contact" style="color:white">
 			<div class="flexWrapper" >
 				<div class="EndCol flexCol" style="margin:0 2.5%; text-align:right">
