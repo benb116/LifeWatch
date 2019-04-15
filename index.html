@@ -13,7 +13,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="jquery.fullpage.min.js"></script>
-
+	<!-- <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script> -->
 	<script type="text/javascript">
 		$(document).ready(function() {
 			var visited = [true, false, false, false, false, false];
@@ -129,6 +129,50 @@
 				}
 			})
 		});
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '70%',
+          width: '85%',
+          videoId: 'eG03bSHrDBU',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        // event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          // setTimeout(stopVideo, 6000);
+          console.log('abjsjsjs');
+          gtag('event', 'click', {
+			'event_category': 'vid'
+		  });
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
 	</script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-49014722-7"></script>
@@ -216,7 +260,8 @@
 		<div class="section" data-anchor="story" style="text-align:center">
 			<h1 style="padding:0">Hear our story.</h1>
 			<br>
-			<iframe width="85%" height="70%" src="https://www.youtube.com/embed/eG03bSHrDBU?rel=0;controls=0;showinfo=0;theme=light" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<!-- <iframe width="85%" height="70%" src="https://www.youtube.com/embed/eG03bSHrDBU?rel=0;controls=0;showinfo=0;theme=light" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+			<div id="player"></div>
 		</div>
 		<div class="section" data-anchor="about">
 			<h1 style="margin:0 auto;text-align:center;padding:0">We're committed to improving the lives of millions. Join us.</h1>
@@ -263,5 +308,8 @@
 			</div>
 		</div>
 	</div>
+	<script>
+
+    </script>
 </body>
 </html>
